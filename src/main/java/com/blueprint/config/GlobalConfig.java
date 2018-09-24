@@ -7,6 +7,12 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Properties;
 
+/**
+ * @author xiaoyetongxue
+ * @data 2018-09-24 16:13
+ * @version 1.0.0
+ * @description 全局配置
+ **/
 @Configuration
 @Slf4j
 public class GlobalConfig {

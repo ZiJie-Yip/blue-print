@@ -20,8 +20,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan("com.blueprint.module.*.serviceDal.mapper")
 public class BlueprintApplication {
 
-
-	@Bean//使用@Bean注入fastJsonHttpMessageConvert
+	/**
+	 * 使用fastjson解析json
+	 */
+	@Bean
 	public HttpMessageConverters fastJsonHttpMessageConverters(){
 		//1.需要定义一个Convert转换消息的对象
 		FastJsonHttpMessageConverter fastConverter=new FastJsonHttpMessageConverter();

@@ -1,3 +1,7 @@
-2018-09-23 02:02:44,728 DEBUG (DruidDataSourceConfig.java:59)- create datasource
-2018-09-23 02:02:44,815 DEBUG (GlobalConfig.java:19)- MyBatisConfiguration.pageHelper()
-2018-09-23 02:02:45,385 INFO (StartupInfoLogger.java:59)- Started BlueprintApplication in 3.262 seconds (JVM running for 4.24)
+2018-09-24 16:49:04,354 DEBUG (DruidDataSourceConfig.java:59)- create datasource
+2018-09-24 16:49:04,665 DEBUG (GlobalConfig.java:25)- MyBatisConfiguration.pageHelper()
+2018-09-24 16:49:05,076 INFO (StartupInfoLogger.java:59)- Started BlueprintApplication in 3.515 seconds (JVM running for 4.833)
+2018-09-24 16:49:15,335 INFO (UserController.java:31)- UserController.login()
+2018-09-24 16:49:15,634 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select user_id, username, password, phone, del_flag, create_time from user where user_id = ? 
+2018-09-24 16:49:15,904 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-09-24 16:49:15,966 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 0
