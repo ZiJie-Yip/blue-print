@@ -1,4 +1,4 @@
-package com.blueprint;
+package com.blueprint.module.user.api;
 
 import com.blueprint.module.user.api.dto.UserLoginReqDto;
 import com.blueprint.module.user.serviceBll.UserServiceBll;
@@ -25,7 +25,7 @@ public class UserController {
 
     @Autowired
     private UserServiceBll userServiceBll;
-
+    
     @PostMapping("/login")
     public JsonData login(@RequestBody @Valid UserLoginReqDto userLoginReqDto){
         log.info("UserController.login()");
