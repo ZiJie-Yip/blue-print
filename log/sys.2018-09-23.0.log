@@ -1,0 +1,8 @@
+2018-09-23 01:38:53,840 INFO (StartupInfoLogger.java:50)- Starting BlueprintApplication on 23RSJ3M31JSZJJ5 with PID 14876 (C:\WorkSpace\blueprint\target\classes started by Administrator in C:\WorkSpace\blueprint)
+2018-09-23 01:38:53,845 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.0.BUILD-SNAPSHOT, Spring v5.1.0.RELEASE
+2018-09-23 01:38:53,847 INFO (SpringApplication.java:697)- No active profile set, falling back to default profiles: default
+2018-09-23 01:38:55,240 DEBUG (DruidDataSourceConfig.java:59)- create datasource
+2018-09-23 01:38:56,089 INFO (StartupInfoLogger.java:59)- Started BlueprintApplication in 4.895 seconds (JVM running for 6.145)
+2018-09-23 01:40:31,623 INFO (StartupInfoLogger.java:50)- Starting BlueprintApplication on 23RSJ3M31JSZJJ5 with PID 13332 (C:\WorkSpace\blueprint\target\classes started by Administrator in C:\WorkSpace\blueprint)
+2018-09-23 01:40:31,629 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.0.BUILD-SNAPSHOT, Spring v5.1.0.RELEASE
+2018-09-23 01:40:31,633 INFO (SpringApplication.java:697)- No active profile set, falling back to default profiles: default

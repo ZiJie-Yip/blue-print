@@ -1,0 +1,3 @@
+2018-09-23 02:02:44,728 DEBUG (DruidDataSourceConfig.java:59)- create datasource
+2018-09-23 02:02:44,815 DEBUG (GlobalConfig.java:19)- MyBatisConfiguration.pageHelper()
+2018-09-23 02:02:45,385 INFO (StartupInfoLogger.java:59)- Started BlueprintApplication in 3.262 seconds (JVM running for 4.24)
