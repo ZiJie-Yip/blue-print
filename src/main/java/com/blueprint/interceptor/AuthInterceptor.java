@@ -1,6 +1,7 @@
 package com.blueprint.interceptor;
 
 import com.blueprint.interceptor.annotation.NotLogin;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Description:权限验证拦截器
  * @date: 2018/11/23 17:45
  */
+@Slf4j
 public class AuthInterceptor extends HandlerInterceptorAdapter{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -27,9 +29,9 @@ public class AuthInterceptor extends HandlerInterceptorAdapter{
     }
 
     public boolean validateLogin(Object handler){
-        if(handler.getClass().isAssignableFrom(NotLogin.class)){
+        if(handler.getClass().isAssignableFrom(HandlerMethod.class)){
             HandlerMethod method = (HandlerMethod) handler;
-            NotLogin notLogin = ((HandlerMethod) handler).getMethodAnnotation(NotLogin.class);
+            NotLogin notLogin = method.getMethodAnnotation(NotLogin.class);
             if(notLogin != null && notLogin.validate()){
                 return true;
             }

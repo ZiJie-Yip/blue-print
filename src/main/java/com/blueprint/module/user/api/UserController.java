@@ -1,15 +1,13 @@
 package com.blueprint.module.user.api;
 
 import com.blueprint.common.JsonData;
+import com.blueprint.interceptor.annotation.NotLogin;
 import com.blueprint.module.user.api.dto.UserLoginReqDto;
 import com.blueprint.module.user.serviceBll.UserServiceBll;
 import com.blueprint.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -26,12 +24,18 @@ public class UserController {
 
     @Autowired
     private UserServiceBll userServiceBll;
-    
+
+    @NotLogin
     @PostMapping("/login")
     public JsonData login(@RequestBody @Valid UserLoginReqDto userLoginReqDto){
         log.info("UserController.login()");
         String yezijie = JwtUtils.createToken("yezijie");
         return JsonData.buildSuccess(yezijie);
+    }
+
+    @GetMapping("/getUserInfo")
+    public JsonData getUserInfo(){
+        return JsonData.buildSuccess("goods login");
     }
 
 

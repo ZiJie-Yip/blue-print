@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Description:Shiro JWT权限过滤器
  * @date: 2018/11/23 11:28
  */
+
 @Slf4j
 public class JwtFilter extends SecurityFilter {
 

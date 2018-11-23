@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.naming.AuthenticationException;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -44,6 +45,14 @@ public class GlobalExceptionHandler {
         String exception = ExceptionUtils.getStackTrace(e);
         log.error("[Exception] --> [RequestUrl:{}] {}", getRequestUrl(request), exception);
         return JsonData.buildError(ExceptionUtils.getStackTrace(e));
+    }
+
+    @ExceptionHandler(value = AuthenticationException.class)
+    @ResponseBody
+    public JsonData handlerAuthenticationException(HttpServletRequest request, AuthenticationException e){
+        String exception = e.getExplanation();
+        log.error("[AuthenticationException] --> [RequestUrl:{}] {}", getRequestUrl(request), exception);
+        return JsonData.buildError("not permission access");
     }
 
     private String getRequestUrl(HttpServletRequest request){
