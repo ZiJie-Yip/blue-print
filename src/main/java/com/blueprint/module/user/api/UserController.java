@@ -1,8 +1,9 @@
 package com.blueprint.module.user.api;
 
+import com.blueprint.common.JsonData;
 import com.blueprint.module.user.api.dto.UserLoginReqDto;
 import com.blueprint.module.user.serviceBll.UserServiceBll;
-import com.blueprint.utils.JsonData;
+import com.blueprint.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,7 +30,8 @@ public class UserController {
     @PostMapping("/login")
     public JsonData login(@RequestBody @Valid UserLoginReqDto userLoginReqDto){
         log.info("UserController.login()");
-        return userServiceBll.login(userLoginReqDto);
+        String yezijie = JwtUtils.createToken("yezijie");
+        return JsonData.buildSuccess(yezijie);
     }
 
 

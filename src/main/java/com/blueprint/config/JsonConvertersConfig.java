@@ -1,4 +1,4 @@
-package com.blueprint;
+package com.blueprint.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
@@ -22,6 +22,9 @@ public class JsonConvertersConfig {
      */
     @Bean
     public HttpMessageConverters fastJsonHttpMessageConverters(){
+        if(log.isTraceEnabled()){
+            log.trace("init fastjson http message converters");
+        }
         //1.需要定义一个Convert转换消息的对象
         FastJsonHttpMessageConverter fastConverter=new FastJsonHttpMessageConverter();
         //2.添加fastjson的配置信息，比如是否要格式化返回的json数据
