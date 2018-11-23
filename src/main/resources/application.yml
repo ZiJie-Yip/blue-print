@@ -14,7 +14,7 @@ spring:
     #datasource
   datasource:
     name: era
-    url: jdbc:mysql://localhost:3306/blueprint-dev?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/blueprint_dev?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
